@@ -1,0 +1,13 @@
+# Core benchmark deps (install on top of the project's requirements.txt).
+psutil>=5.9
+pandas>=2.0
+pyarrow>=14.0
+numpy<2
+
+# Hardware probes — install only what applies to the target hardware:
+#   pynvml         desktop NVIDIA GPUs (rtx3090, rtx4060, dgx_spark; optional on Jetsons).
+#   jetson-stats   exposes `jtop` and configures tegrastats on Jetsons.
+# These are intentionally not auto-pinned to a version because the available
+# wheel depends on the device. Uncomment as appropriate.
+# pynvml>=11.5
+# jetson-stats>=4.2

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cadastro Facial</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Cadastro Facial</h1>
+
+        <p class="subtitle">
+            Cadastre uma pessoa para reconhecimento facial.
+        </p>
+
+        <form id="personForm">
+
+            <label for="name">
+                Nome da pessoa
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ex.: Gabrielle"
+                required
+            >
+
+            <label for="files">
+                Fotos
+            </label>
+
+            <input
+                type="file"
+                id="files"
+                name="files"
+                accept="image/*"
+                multiple
+                required
+            >
+
+            <div
+                id="preview"
+                class="preview"
+            ></div>
+
+            <button
+                type="submit"
+                id="submitButton"
+            >
+                Cadastrar pessoa
+            </button>
+
+        </form>
+
+        <div
+            id="status"
+            class="status hidden"
+        ></div>
+
+    </main>
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>

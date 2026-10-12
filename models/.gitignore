@@ -1,0 +1,13 @@
+# hw/<cuda>: so o que o e2e usa neste alvo. Ultima regra que casa vence.
+# A precisao fp16 e flag de build TensorRT sobre o proprio fp32 -- nao ha arquivo fp16.
+*
+!.gitignore
+!MANIFEST.tsv
+!yunet/
+yunet/*
+!yunet/face_detection_yunet_2023mar.onnx
+!onnx/
+onnx/*
+!onnx/mobilefacenet_w600k.onnx
+!onnx/edgeface_xs.onnx
+# arcface_r100.onnx (260 MB > limite do GitHub) vem do HF: bash scripts/fetch_models.sh

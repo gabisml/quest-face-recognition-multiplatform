@@ -1,0 +1,20 @@
+# gerado em 2026-08-27T15:36:41Z de arid-horse:/home/mendel/data/PDC-face/face-recognition
+# Python 3.9.25
+# ORT providers: n/a (sem onnxruntime; extrator e tflite_runtime na Edge TPU)
+# fonte: dist-info do site-packages (venv sem modulo pip)
+cramjam==2.11.0
+fastparquet==2024.11.0
+fsspec==2025.10.0
+imageio==2.37.2
+imageio_ffmpeg==0.6.0
+numpy==1.26.4
+opencv_python_headless==4.11.0.86
+packaging==26.3
+pandas==2.3.3
+pillow==11.3.0
+psutil==7.2.2
+python_dateutil==2.9.0.post0
+pytz==2026.3.post1
+six==1.17.0
+tflite_runtime==2.7.0
+tzdata==2026.3

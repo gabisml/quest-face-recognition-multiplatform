@@ -1,0 +1,9 @@
+# destino	bytes	sha256	hw (csv)	url
+# Modelos acima de 50 MB nao viajam pelo git; scripts/fetch_models.sh baixa do
+# HuggingFace e confere o SHA-256. Os TFLite da Coral sao os CANONICOS da placa
+# (calibracao pareada int8/_edgetpu; ver docs/BRANCHING.md).
+models/onnx/arcface_r100.onnx	260694169	3116faa7af3d05c6c59e96cd801e99507a985823907ff9cd9da06735256461c5	dgx_spark,jetson_agx_orin,jetson_orin_nano,jetson_agx_thor,nuc,rtx4060,rtx3090,rpi5	https://huggingface.co/marcelohaps/face-recognition-bench-models/resolve/main/onnx/arcface_r100.onnx
+models/onnx/arcface_r100_fp16.onnx	130399627	2893e1b7df543449966a57222e3c714e297b4ace02ed40151e869051605cb610	rpi5	https://huggingface.co/marcelohaps/face-recognition-bench-models/resolve/main/onnx/arcface_r100_fp16.onnx
+models/onnx/arcface_r100_int8_ort.onnx	65722491	7372e9079bb171d40977b56f3df88ddfcc8c974aa2d85a7335a3761b5f301e35	rpi5	https://huggingface.co/marcelohaps/face-recognition-bench-models/resolve/main/onnx/arcface_r100_int8_ort.onnx
+models/tflite/arcface_r100_int8.tflite	65882880	e5cd4355da3a214dbaa81202422b4b12e08bba910cdea21c82cb00a1f38fa7d4	coral_dev	https://huggingface.co/marcelohaps/face-recognition-bench-models/resolve/main/tflite/arcface_r100_int8.tflite
+models/tflite/arcface_r100_int8_edgetpu.tflite	66785920	f779dbdb5ee165a11481d4d2079ef594104f517d9f1565016db765dc4613c8aa	coral_dev	https://huggingface.co/marcelohaps/face-recognition-bench-models/resolve/main/tflite/arcface_r100_int8_edgetpu.tflite

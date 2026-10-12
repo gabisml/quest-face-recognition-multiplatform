@@ -1,0 +1,46 @@
+MIT License
+
+Copyright (c) 2026 Marcelo Alves — PDC-EAI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Aviso sobre componentes de terceiros
+
+A licença MIT acima cobre **apenas o código escrito neste repositório**. Ela não
+se estende aos modelos pré-treinados, aos pesos, aos datasets nem às
+arquiteturas de terceiros que o projeto usa. Cada um tem licença própria, e
+várias delas **restringem o uso a pesquisa não comercial**. Este é um projeto de
+pesquisa; quem for reutilizá-lo em qualquer contexto comercial precisa verificar
+cada item na fonte.
+
+| Componente | Onde aparece | Observação |
+|---|---|---|
+| InsightFace — ArcFace r100, `buffalo_s` / `w600k_mbf` | `utils/local_arcface_backbones.py`, `utils/arcface_inference.py`, pesos em `models/` | Os pesos pré-treinados do InsightFace são distribuídos **para pesquisa não comercial**. É a restrição mais forte da lista. |
+| FaceLiVT v2 | `utils/facelivt_arch.py`, `utils/facelivt_inference.py`, pesos em `models/facelivt2/` | Código fornecido pelos autores do modelo; licença conforme a publicação original. |
+| EdgeFace (Idiap) | `utils/edgeface_inference.py`, checkpoints em `edge-face/` | Licença da Idiap, própria. |
+| YuNet | `utils/yunet_inference.py`, `models/yunet/` | Modelo do OpenCV Zoo. |
+| MTCNN via `facenet-pytorch` | `utils/arcface_inference.py` | Dependência declarada no `requirements.txt`. |
+| YOLO via `ultralytics` | `utils/yolo_inference.py` | O `ultralytics` é **AGPL-3.0**, que é copyleft e tem implicações para redistribuição. |
+| Datasets de verificação (LFW, CALFW, AgeDB-30, CFP-FP, IJB-B/C, TinyFace) | `bench/dataset_lfw.py`, `precision_accuracy/`, `scripts/eval/` | Cada um com seus próprios termos de uso e restrições de redistribuição. |
+
+Os pesos e datasets **não são versionados** neste repositório — o `.gitignore`
+exclui `models/`, `data/` e afins. Eles são baixados das fontes originais, sob as
+licenças das fontes originais.

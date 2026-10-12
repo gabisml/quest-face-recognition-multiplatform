@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencv-python"
+version = "4.13.0.92"
+description = "Metadata placeholder for the project-local OpenCV CUDA build."
+requires-python = ">=3.10"
+dependencies = ["numpy<2"]
+
+[tool.setuptools]
+packages = []
